@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Class Activities - Stocks</title>
+  <link rel="stylesheet" href="asg3.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="asg3homepage.html">Home</a></li>
+      <li><a href="asg3stocks.html">Stocks</a></li>
+      <li><a href="asg3dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Stock Lookup</h2>
+    <input type="text" id="ticker" placeholder="Enter stock ticker (e.g., AAPL)" />
+    <select id="days">
+      <option value="30">30 Days</option>
+      <option value="60">60 Days</option>
+      <option value="90">90 Days</option>
+    </select>
+    <button onclick="fetchStockData()" class="button-1">Show Chart</button>
+
+    <div style="margin-top: 30px;">
+      <canvas id="stockChart" width="600" height="300"></canvas>
+    </div>
+
+    <h3 style="margin-top: 40px;">Top 5 Reddit Stocks</h3>
+    <table id="redditTable">
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Comment Count</th>
+          <th>Sentiment</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <div id="audio-instructions">
+    <p>Say "Lookup &lt;stock&gt;"</p>
+    <button id="start-voice" class="button-1">Turn On Audio</button>
+    <button id="stop-voice" class="button-1">Turn Off Audio</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="asg3.js"></script>
+  <script src="asg3stocks.js"></script>
+</body>
+</html>
