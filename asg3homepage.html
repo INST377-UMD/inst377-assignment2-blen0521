@@ -15,25 +15,26 @@
   </nav>
 
   <main>
+    <h2>Welcome to Class Activities!</h2>
     <div class="home-buttons">
-      <button onclick="window.location.href='asg3stocks.html'" class="custom-btn">Stocks</button>
-      <button onclick="window.location.href='asg3dogs.html'" class="custom-btn">Dogs</button>
+      <button onclick="window.location.href='asg3stocks.html'" class="button-1">Stocks</button>
+      <button onclick="window.location.href='asg3dogs.html'" class="button-1">Dogs</button>
     </div>
-    <p id="quote"></p>
+
+    <p id="quote" style="margin-top: 30px;"></p>
   </main>
 
   <div id="audio-instructions">
     <p>Say "Hello"</p>
     <p>Say "Change the color to red/blue"</p>
     <p>Say "Navigate to home/stocks/dogs"</p>
-    <button id="start-voice">Turn On Audio</button>
-    <button id="stop-voice">Turn Off Audio</button>
+    <button id="start-voice" class="button-1">Turn On Audio</button>
+    <button id="stop-voice" class="button-1">Turn Off Audio</button>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
   <script src="asg3.js"></script>
   <script>
-
     fetch('https://api.quotable.io/random')
       .then(res => res.json())
       .then(data => {
