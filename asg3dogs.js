@@ -2,7 +2,7 @@ async function loadDogs() {
     const res = await fetch('https://dog.ceo/api/breeds/image/random/10');
     const data = await res.json();
     const carousel = document.getElementById('dog-carousel');
-    carousel.innerHTML = ''; 
+    carousel.innerHTML = '';
   
     data.message.forEach(img => {
       const imgTag = document.createElement('img');
@@ -22,11 +22,12 @@ async function loadDogs() {
     const data = await res.json();
     const breeds = Object.keys(data.message);
     const container = document.getElementById('breed-buttons');
+    container.innerHTML = '';
   
     breeds.forEach(breed => {
       const btn = document.createElement('button');
       btn.textContent = breed;
-      btn.classList.add('custom-btn');
+      btn.classList.add('button-1'); // Custom styling here
       btn.setAttribute('data-breed', breed);
       btn.addEventListener('click', () => loadBreedInfo(breed));
       container.appendChild(btn);
